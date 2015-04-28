@@ -10,12 +10,17 @@ gene: # Not validated
     parent: string
 locus:
     description: 'AGI Gene Locus Identifiers'
-    validator: '^AT[1-5GM][0-5]{5,5}$'
+    validator: '^AT[1-5CM]G[0-9]{5,5}$'
+    case_sensitive: false
+    parent: identifier
+transposable_element:
+    description: 'Transposable element feature identifiers'
+    validator: '^AT[1-5]TE[0-9]{5,5}$'
     case_sensitive: false
     parent: identifier
 transcript:
     description: 'AGI Transcript Identifiers'
-    validator: '^AT[1-5GM][0-9]{5,5}.[0-9]{1,3}$'
+    validator: '^AT[1-5CM]G[0-9]{5,5}\.[0-9]{1,3}$'
     case_sensitive: false
     parent: identifier
 chromosome:
@@ -26,9 +31,13 @@ chromosome:
 start: # Not ranged checked
     description: 'Coordinate within A. thaliana Col-0 assembly'
     parent: integer
-end: # Not ranged checked
+    alias:
+        - 'begin'
+stop: # Not ranged checked
     description: 'Coordinate within A. thaliana Col-0 assembly'
     parent: integer
+        alias:
+        - 'end'
 strand: # Maps to GFF3
     description: 'Genomic strand'
     parent: string
