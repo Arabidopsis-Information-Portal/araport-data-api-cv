@@ -30,7 +30,7 @@ end: # Not ranged checked
     description: 'Coordinate within A. thaliana Col-0 assembly'
     parent: integer
 strand: # Maps to GFF3
-    description: genomic strand
+    description: 'Genomic strand'
     parent: string
     enum:
         - '+' # Watson
