@@ -1,0 +1,17 @@
+string:
+    description: 'An ASCII text string'
+    validator: '[:ascii:]'
+number:
+    description: 'A number'
+integer:
+    description: 'An integer'
+    validator: '[+-]?\b[0-9]+\b'
+float:
+    description: 'A floating point number'
+    validator: '[-+]?[0-9]+\.[0-9]+'
+boolean:
+    description: 'A Boolean value'
+    case_sensitive: true
+    enum:
+        - 'true'
+        - 'false'
