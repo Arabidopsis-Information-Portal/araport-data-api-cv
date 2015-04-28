@@ -36,7 +36,7 @@ start: # Not ranged checked
 stop: # Not ranged checked
     description: 'Coordinate within A. thaliana Col-0 assembly'
     parent: integer
-        alias:
+    alias:
         - 'end'
 strand: # Maps to GFF3
     description: 'Genomic strand'
